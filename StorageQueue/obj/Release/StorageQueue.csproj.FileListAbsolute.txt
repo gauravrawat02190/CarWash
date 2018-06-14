@@ -1,0 +1,15 @@
+D:\Projects\CarWash\StorageQueue\bin\Release\StorageQueue.exe.config
+D:\Projects\CarWash\StorageQueue\bin\Release\StorageQueue.exe
+D:\Projects\CarWash\StorageQueue\bin\Release\StorageQueue.pdb
+D:\Projects\CarWash\StorageQueue\bin\Release\Microsoft.Azure.KeyVault.Core.dll
+D:\Projects\CarWash\StorageQueue\bin\Release\Microsoft.WindowsAzure.Configuration.dll
+D:\Projects\CarWash\StorageQueue\bin\Release\Microsoft.WindowsAzure.Storage.dll
+D:\Projects\CarWash\StorageQueue\bin\Release\Newtonsoft.Json.dll
+D:\Projects\CarWash\StorageQueue\bin\Release\Microsoft.Azure.KeyVault.Core.xml
+D:\Projects\CarWash\StorageQueue\bin\Release\Microsoft.WindowsAzure.Configuration.xml
+D:\Projects\CarWash\StorageQueue\bin\Release\Microsoft.WindowsAzure.Storage.pdb
+D:\Projects\CarWash\StorageQueue\bin\Release\Microsoft.WindowsAzure.Storage.xml
+D:\Projects\CarWash\StorageQueue\bin\Release\Newtonsoft.Json.xml
+D:\Projects\CarWash\StorageQueue\obj\Release\StorageQueue.csprojResolveAssemblyReference.cache
+D:\Projects\CarWash\StorageQueue\obj\Release\StorageQueue.exe
+D:\Projects\CarWash\StorageQueue\obj\Release\StorageQueue.pdb

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyDBModelStoreContainer" CdmEntityContainer="CarWashConnection">
+    <EntitySetMapping Name="ServiceOrders">
+      <EntityTypeMapping TypeName="MyDBModel.ServiceOrder">
+        <MappingFragment StoreEntitySet="ServiceOrder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceVacId" ColumnName="ServiceVacId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceVacancyMasters">
+      <EntityTypeMapping TypeName="MyDBModel.ServiceVacancyMaster">
+        <MappingFragment StoreEntitySet="ServiceVacancyMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Vacancy" ColumnName="Vacancy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="MyDBModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="TeamSize" ColumnName="TeamSize" />
+          <ScalarProperty Name="ClassNo" ColumnName="ClassNo" />
+          <ScalarProperty Name="RollNo" ColumnName="RollNo" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
