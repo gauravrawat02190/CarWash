@@ -57,3 +57,6 @@ D:\Projects\CarWash\myWebJobTest\bin\Debug\zh-Hans\Microsoft.Data.Services.Clien
 D:\Projects\CarWash\myWebJobTest\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
 D:\Projects\CarWash\myWebJobTest\obj\Debug\myWebJobTest.exe
 D:\Projects\CarWash\myWebJobTest\obj\Debug\myWebJobTest.pdb
+D:\Projects\CarWash\myWebJobTest\obj\Debug\myWebJobTest.csprojAssemblyReference.cache
+D:\Projects\CarWash\myWebJobTest\obj\Debug\myWebJobTest.csproj.CoreCompileInputs.cache
+D:\Projects\CarWash\myWebJobTest\obj\Debug\myWebJobTest.csproj.CopyComplete

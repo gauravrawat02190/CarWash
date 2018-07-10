@@ -52,6 +52,8 @@ D:\Projects\CarWash\CarWash\bin\System.Web.Razor.xml
 D:\Projects\CarWash\CarWash\bin\System.Web.WebPages.xml
 D:\Projects\CarWash\CarWash\bin\System.Web.WebPages.Deployment.xml
 D:\Projects\CarWash\CarWash\bin\System.Web.WebPages.Razor.xml
-D:\Projects\CarWash\CarWash\obj\Debug\CarWash.csprojResolveAssemblyReference.cache
 D:\Projects\CarWash\CarWash\obj\Debug\CarWash.dll
 D:\Projects\CarWash\CarWash\obj\Debug\CarWash.pdb
+D:\Projects\CarWash\CarWash\obj\Debug\CarWash.csprojAssemblyReference.cache
+D:\Projects\CarWash\CarWash\obj\Debug\CarWash.csproj.CoreCompileInputs.cache
+D:\Projects\CarWash\CarWash\obj\Debug\CarWash.csproj.CopyComplete

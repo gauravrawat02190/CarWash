@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWash", "CarWash\CarWash.csproj", "{BD3D7636-2E5F-47D8-9A1E-2B18B5527AB2}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBus", "ServiceBus\ServiceBus.csproj", "{3F43F4FF-28C3-4A98-914F-D9D7F8B20F39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myWebJobTest", "myWebJobTest\myWebJobTest.csproj", "{C71CEE4A-4B54-4870-9B5E-9B8E639A2B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D28F6132-E5D2-4D90-AF50-B17D575D6409}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{C71CEE4A-4B54-4870-9B5E-9B8E639A2B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C71CEE4A-4B54-4870-9B5E-9B8E639A2B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C71CEE4A-4B54-4870-9B5E-9B8E639A2B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D28F6132-E5D2-4D90-AF50-B17D575D6409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28F6132-E5D2-4D90-AF50-B17D575D6409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28F6132-E5D2-4D90-AF50-B17D575D6409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28F6132-E5D2-4D90-AF50-B17D575D6409}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBFAF9B5-5F05-449F-AED8-AE51ED6ED7DF}
 	EndGlobalSection
 EndGlobal

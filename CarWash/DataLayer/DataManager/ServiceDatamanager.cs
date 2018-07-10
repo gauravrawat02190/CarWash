@@ -35,6 +35,7 @@ namespace CarWash.DataLayer.DataManager
         {
             using (CarWashConnection con = new CarWashConnection())
             {
+                var res = from data in con.Projects group data by data.ClassNo into data select data.ToList();
                 return con.Projects.ToList();
             }
         }

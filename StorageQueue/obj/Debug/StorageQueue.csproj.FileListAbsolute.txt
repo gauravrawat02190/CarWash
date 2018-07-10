@@ -10,6 +10,8 @@ D:\Projects\CarWash\StorageQueue\bin\Debug\Microsoft.WindowsAzure.Configuration.
 D:\Projects\CarWash\StorageQueue\bin\Debug\Microsoft.WindowsAzure.Storage.pdb
 D:\Projects\CarWash\StorageQueue\bin\Debug\Microsoft.WindowsAzure.Storage.xml
 D:\Projects\CarWash\StorageQueue\bin\Debug\Newtonsoft.Json.xml
-D:\Projects\CarWash\StorageQueue\obj\Debug\StorageQueue.csprojResolveAssemblyReference.cache
 D:\Projects\CarWash\StorageQueue\obj\Debug\StorageQueue.exe
 D:\Projects\CarWash\StorageQueue\obj\Debug\StorageQueue.pdb
+D:\Projects\CarWash\StorageQueue\obj\Debug\StorageQueue.csprojAssemblyReference.cache
+D:\Projects\CarWash\StorageQueue\obj\Debug\StorageQueue.csproj.CoreCompileInputs.cache
+D:\Projects\CarWash\StorageQueue\obj\Debug\StorageQueue.csproj.CopyComplete

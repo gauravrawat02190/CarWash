@@ -1,4 +1,3 @@
-D:\Projects\CarWash\ServiceBus\obj\Debug\ServiceBus.csprojResolveAssemblyReference.cache
 D:\Projects\CarWash\ServiceBus\bin\Debug\ServiceBus.exe.config
 D:\Projects\CarWash\ServiceBus\bin\Debug\ServiceBus.exe
 D:\Projects\CarWash\ServiceBus\bin\Debug\ServiceBus.pdb
@@ -25,3 +24,7 @@ D:\Projects\CarWash\ServiceBus\bin\Debug\Microsoft.Azure.KeyVault.Core.xml
 D:\Projects\CarWash\ServiceBus\bin\Debug\Newtonsoft.Json.xml
 D:\Projects\CarWash\ServiceBus\obj\Debug\ServiceBus.exe
 D:\Projects\CarWash\ServiceBus\obj\Debug\ServiceBus.pdb
+D:\Projects\CarWash\ServiceBus\bin\Debug\StorageQueue.exe.config
+D:\Projects\CarWash\ServiceBus\obj\Debug\ServiceBus.csprojAssemblyReference.cache
+D:\Projects\CarWash\ServiceBus\obj\Debug\ServiceBus.csproj.CoreCompileInputs.cache
+D:\Projects\CarWash\ServiceBus\obj\Debug\ServiceBus.csproj.CopyComplete
