@@ -7,6 +7,8 @@
       <Diagram DiagramId="097d05a76f1c4e41b5855dc70949be3b" Name="Diagram1">
         <EntityTypeShape EntityType="OrderModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="OrderModel.Order" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OrderModel.EmployeeMaster" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="OrderModel.TeamMaster" Width="1.5" PointX="2.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

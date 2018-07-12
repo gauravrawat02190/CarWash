@@ -13,7 +13,6 @@ namespace DbConsole
         {
             using (PracEntities entity = new PracEntities())
             {
-                var categories = entity.Categories.AsEnumerable();
                 var result = (from order in entity.Orders
                               join category in entity.Categories
                                 on order.categoryid equals category.id
@@ -22,23 +21,47 @@ namespace DbConsole
                               by new
                               {
                                   order.categoryid,
-                                  category.id,
-                                  category.name                                  
+                                  category.name
                               }
                                into
-                              Result orderby Result.Key.name descending
+                              Result
+                              orderby Result.Key.name descending
                               select new
                               {
-                                  TotalAmount = Result.Sum(g => g.amount),
+                                  TotalAmount = Result.Sum(g => g.amount * g.unit),
                                   categoryId = Result.Key.categoryid,
-                                  CategoryName = categories.Where(g => g.id == Result.Key.categoryid).Select(g => g.name).FirstOrDefault()
+                                  CategoryName = Result.Key.name
                               }).ToList();
 
-                foreach(var item in result)
+                foreach (var item in result)
                 {
                     Console.WriteLine("Category Name :" + item.CategoryName + " - " + "Total Sum " + item.TotalAmount);
                 }
 
+            }
+        }
+
+
+        public static void GetEmployeeDetails()
+        {
+            using (PracEntities entity = new PracEntities())
+            {
+                var res = (from emp in entity.EmployeeMasters
+                           join team in entity.TeamMasters
+                            on emp.EmpId equals team.EmpId
+                           join manager in entity.EmployeeMasters
+                            on team.ReportingManagerId equals manager.EmpId
+                           select new
+                           {
+                               CostCenter = team.CostCenter,
+                               EmployeeName = emp.name,
+                               Manager = manager.name
+                           }).ToList();
+
+                foreach(var item in res)
+                {
+                    Console.WriteLine("CostCenter: " + item.CostCenter + " Emp Name: " + item.EmployeeName + " Manager Name: " + item.Manager);
+                }
             }
         }
 
@@ -59,7 +82,7 @@ namespace DbConsole
                               orderby Result.Key.custname ascending
                               select new
                               {
-                                  TotalAmount = Result.Sum(g => g.amount),
+                                  TotalAmount = Result.Sum(g => g.amount * g.unit),
                                   CustomerName = Result.Key.custname
                               }).ToList();
 
@@ -80,6 +103,8 @@ namespace DbConsole
             LinqHelper.GetOrderByCategory();
             Console.WriteLine("---------------------------------------------");
             LinqHelper.GetOrderByCustomer();
+            Console.WriteLine("---------------------------------------------");
+            LinqHelper.GetEmployeeDetails();
             Console.ReadLine();
         }
     }
