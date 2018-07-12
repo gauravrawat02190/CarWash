@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DbConsole
 {
@@ -16,7 +13,6 @@ namespace DbConsole
                 var result = (from order in entity.Orders
                               join category in entity.Categories
                                 on order.categoryid equals category.id
-                              //where order.amount> 10
                               group order
                               by new
                               {
@@ -53,7 +49,7 @@ namespace DbConsole
                             on team.ReportingManagerId equals manager.EmpId
                            select new
                            {
-                               CostCenter = team.CostCenter,
+                               team.CostCenter,
                                EmployeeName = emp.name,
                                Manager = manager.name
                            }).ToList();
