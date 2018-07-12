@@ -1,0 +1,12 @@
+D:\Projects\CarWash\DbConsole\bin\Debug\DbConsole.exe.config
+D:\Projects\CarWash\DbConsole\bin\Debug\DbConsole.exe
+D:\Projects\CarWash\DbConsole\bin\Debug\DbConsole.pdb
+D:\Projects\CarWash\DbConsole\bin\Debug\EntityFramework.dll
+D:\Projects\CarWash\DbConsole\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\CarWash\DbConsole\bin\Debug\EntityFramework.xml
+D:\Projects\CarWash\DbConsole\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\CarWash\DbConsole\obj\Debug\DbConsole.csprojAssemblyReference.cache
+D:\Projects\CarWash\DbConsole\obj\Debug\DbConsole.csproj.CoreCompileInputs.cache
+D:\Projects\CarWash\DbConsole\obj\Debug\DbConsole.csproj.CopyComplete
+D:\Projects\CarWash\DbConsole\obj\Debug\DbConsole.exe
+D:\Projects\CarWash\DbConsole\obj\Debug\DbConsole.pdb
