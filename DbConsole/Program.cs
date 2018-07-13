@@ -37,6 +37,75 @@ namespace DbConsole
             }
         }
 
+        public static void sortNumber()
+        {
+            int[] a = { 4, 1, 23, 5, 100, 2, 10, 500, 12, 22 };
+            for (var i = 1; i < a.Length; i++)
+            {
+                for (var j = 0; j < a.Length - 1; j++)
+                {
+                    if (a[j] > a[j + 1])
+                    {
+                        var temp = a[j + 1];
+                        a[j + 1] = a[j];
+                        a[j] = temp;
+                    }
+                }
+            }
+
+            foreach (var item in a)
+            {
+                Console.WriteLine(item);
+            }
+
+
+        }
+
+        public static void IsPalidrome()
+        {
+            const string str = "NAN";
+            string strreverse = "";
+            for (var i= str.Length-1;i>=0;i--)
+            {
+                strreverse += str[i].ToString();
+            }
+
+            if(str== strreverse)
+            {
+                Console.WriteLine("ISPalindrome");
+            }
+            else
+            {
+                Console.WriteLine("IS Not Palindrome");
+
+            }
+        }
+
+        public static void sortString()
+        {
+            string s = "g,a,v,s,b,z,a,k,n,p";
+            var a = s.Split(',');
+            for (var i = 1; i < a.Length; i++)
+            {
+                for (var j = 0; j < a.Length - 1; j++)
+                {
+                    if (a[j].CompareTo(a[j + 1]) > 0)
+                    {
+                        var temp = a[j + 1];
+                        a[j + 1] = a[j];
+                        a[j] = temp;
+                    }
+                }
+            }
+
+            foreach (var item in a)
+            {
+                Console.WriteLine(item);
+            }
+
+
+        }
+
 
         public static void GetEmployeeDetails()
         {
@@ -54,7 +123,7 @@ namespace DbConsole
                                Manager = manager.name
                            }).ToList();
 
-                foreach(var item in res)
+                foreach (var item in res)
                 {
                     Console.WriteLine("CostCenter: " + item.CostCenter + " Emp Name: " + item.EmployeeName + " Manager Name: " + item.Manager);
                 }
@@ -101,6 +170,12 @@ namespace DbConsole
             LinqHelper.GetOrderByCustomer();
             Console.WriteLine("---------------------------------------------");
             LinqHelper.GetEmployeeDetails();
+            Console.WriteLine("---------------------------------------------");
+            LinqHelper.sortNumber();
+            Console.WriteLine("---------------------------------------------");
+            LinqHelper.sortString();
+            Console.WriteLine("---------------------------------------------");
+            LinqHelper.IsPalidrome();
             Console.ReadLine();
         }
     }
