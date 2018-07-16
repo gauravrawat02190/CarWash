@@ -32,12 +32,12 @@ namespace Test
 
     public class GenericClass<T>
     {
-        public T GetSum(T var1, T var2)
-        {
-            dynamic a1 = var1;
-            dynamic b = var2;
-            return a1 + b;
-        }
+        //public T GetSum(T var1, T var2)
+        //{
+        //    dynamic a1 = var1;
+        //    dynamic b = var2;
+        //    return a1 + b;
+        //}
     }
 
 }

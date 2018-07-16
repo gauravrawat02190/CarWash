@@ -21,6 +21,7 @@ namespace Test
 
         public override void GetResult(ref int i)
         {
+            i++;
             var resul = i + 1;
         }
 
@@ -57,10 +58,15 @@ namespace Test
             obj1.Result();
             obj1.Result();
             int i = 1 ;
+            Console.WriteLine("before i=" + i.ToString());
+
             obj1.GetResult(ref i);
+            Console.WriteLine("after i="+i.ToString());
             obj1.Process();
             int j;
             obj1.GetResult1(out j);
+            Console.WriteLine("after j="+j.ToString());
+
             GetEvent += new GetResult(Get1);
             GetEvent += new GetResult(Get2);
             GetEvent.Invoke(1);

@@ -176,7 +176,14 @@ namespace DbConsole
             LinqHelper.sortString();
             Console.WriteLine("---------------------------------------------");
             LinqHelper.IsPalidrome();
+            Console.WriteLine("---------------------------------------------");
+
+
+            Test.Test3 obj = new Test.Test3();
+            obj.getChanges();
+
             Console.ReadLine();
+
         }
     }
 }
