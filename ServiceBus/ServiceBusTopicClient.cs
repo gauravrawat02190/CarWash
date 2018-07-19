@@ -32,7 +32,6 @@ namespace ServiceBus
 
         }
 
-
         public async Task FilteredMessages()
         {
             namespacemanager.DeleteSubscription(topicName, filteredsubscriber);

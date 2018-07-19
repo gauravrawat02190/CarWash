@@ -69,7 +69,11 @@ namespace Test
 
             GetEvent += new GetResult(Get1);
             GetEvent += new GetResult(Get2);
-            GetEvent.Invoke(1);
+
+            foreach(GetResult invoke in GetEvent.GetInvocationList())
+            {
+                Console.WriteLine(invoke(1));
+            }
         }
 
         public int Get1(int i)

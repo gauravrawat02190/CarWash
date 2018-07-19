@@ -181,7 +181,6 @@ namespace DbConsole
 
             Test.Test3 obj = new Test.Test3();
             obj.getChanges();
-
             Console.ReadLine();
 
         }
