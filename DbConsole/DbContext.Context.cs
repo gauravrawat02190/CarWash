@@ -29,5 +29,8 @@ namespace DbConsole
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<EmployeeMaster> EmployeeMasters { get; set; }
         public virtual DbSet<TeamMaster> TeamMasters { get; set; }
+        public virtual DbSet<MonthMaster> MonthMasters { get; set; }
+        public virtual DbSet<PaymentMaster> PaymentMasters { get; set; }
+        public virtual DbSet<StudentMaster> StudentMasters { get; set; }
     }
 }

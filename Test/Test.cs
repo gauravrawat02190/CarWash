@@ -23,6 +23,11 @@ namespace Test
         }
     }
 
+    public abstract class AbsTest
+    {
+
+    }
+
     public interface ITest
     {
 
@@ -38,6 +43,12 @@ namespace Test
         //    dynamic b = var2;
         //    return a1 + b;
         //}
+    }
+
+    public class childClass: AbsTest
+
+    {
+
     }
 
 }

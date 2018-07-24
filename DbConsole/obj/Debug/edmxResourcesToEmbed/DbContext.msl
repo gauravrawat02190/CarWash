@@ -37,5 +37,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MonthMasters">
+      <EntityTypeMapping TypeName="OrderModel.MonthMaster">
+        <MappingFragment StoreEntitySet="MonthMaster">
+          <ScalarProperty Name="LateFee" ColumnName="LateFee" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMasters">
+      <EntityTypeMapping TypeName="OrderModel.PaymentMaster">
+        <MappingFragment StoreEntitySet="PaymentMaster">
+          <ScalarProperty Name="monthid" ColumnName="monthid" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentMasters">
+      <EntityTypeMapping TypeName="OrderModel.StudentMaster">
+        <MappingFragment StoreEntitySet="StudentMaster">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -14,6 +14,15 @@
     <Property Name="EmpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="MonthMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MonthName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DueDate" Type="int" />
+    <Property Name="LateFee" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="Id" />
@@ -23,6 +32,22 @@
     <Property Name="custname" Type="nchar" MaxLength="10" />
     <Property Name="unit" Type="int" />
     <Property Name="categoryid" Type="int" />
+  </EntityType>
+  <EntityType Name="PaymentMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="PaidDate" Type="date" />
+    <Property Name="monthid" Type="int" />
+  </EntityType>
+  <EntityType Name="StudentMaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TeamMaster">
     <Key>
@@ -35,7 +60,10 @@
   <EntityContainer Name="OrderModelStoreContainer">
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EmployeeMaster" EntityType="Self.EmployeeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonthMaster" EntityType="Self.MonthMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentMaster" EntityType="Self.PaymentMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentMaster" EntityType="Self.StudentMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TeamMaster" EntityType="Self.TeamMaster" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

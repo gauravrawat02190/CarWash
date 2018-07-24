@@ -22,6 +22,9 @@
     <EntitySet Name="Orders" EntityType="Self.Order" />
     <EntitySet Name="EmployeeMasters" EntityType="OrderModel.EmployeeMaster" />
     <EntitySet Name="TeamMasters" EntityType="OrderModel.TeamMaster" />
+    <EntitySet Name="MonthMasters" EntityType="OrderModel.MonthMaster" />
+    <EntitySet Name="PaymentMasters" EntityType="OrderModel.PaymentMaster" />
+    <EntitySet Name="StudentMasters" EntityType="OrderModel.StudentMaster" />
   </EntityContainer>
   <EntityType Name="EmployeeMaster">
     <Key>
@@ -37,5 +40,30 @@
     <Property Name="CostCenter" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="EmpId" Type="Int32" />
     <Property Name="ReportingManagerId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MonthMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MonthName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DueDate" Type="Int32" />
+    <Property Name="LateFee" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="PaymentMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="Int32" />
+    <Property Name="PaidDate" Type="DateTime" Precision="0" />
+    <Property Name="monthid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StudentMaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

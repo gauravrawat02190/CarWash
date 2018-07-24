@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DbConsole
@@ -65,12 +66,12 @@ namespace DbConsole
         {
             const string str = "NAN";
             string strreverse = "";
-            for (var i= str.Length-1;i>=0;i--)
+            for (var i = str.Length - 1; i >= 0; i--)
             {
                 strreverse += str[i].ToString();
             }
 
-            if(str== strreverse)
+            if (str == strreverse)
             {
                 Console.WriteLine("ISPalindrome");
             }
@@ -130,6 +131,54 @@ namespace DbConsole
             }
         }
 
+        public static List<FeesView> GetFees()
+        {
+            List<FeesView> feesViews = new List<FeesView>();
+            using (PracEntities entity = new PracEntities())
+            {
+                var monthmasterList = entity.MonthMasters.ToList();
+                var result = (from fee in entity.PaymentMasters
+                              join monthmaster in entity.MonthMasters on
+                            fee.monthid equals monthmaster.Id where fee.PaidDate.Value.Day >monthmaster.DueDate
+                              group monthmaster
+                                by new
+                                {
+                                    fee.monthid,
+                                    monthmaster.MonthName
+                                }
+                            into monthResult
+                              select new FeesView
+                              {
+                                  Id = monthResult.Key.monthid??0,
+                                  monthname = monthResult.Key.MonthName,
+                                  fees = monthResult.Sum(g => g.LateFee ?? 0)
+
+                              }).AsEnumerable();
+
+                var res = result.ToList();
+
+                foreach(var item in monthmasterList)
+                {
+                    var filteredItem = res.FirstOrDefault(g => g.Id == item.Id);
+                    if(filteredItem!=null)
+                    {
+
+                        feesViews.Add(new FeesView { fees = filteredItem.fees, Id = filteredItem.Id, monthname = filteredItem.monthname });
+                    }
+                    else
+                    {
+                        feesViews.Add(new FeesView { fees = 0, Id = item.Id, monthname = item.MonthName });
+
+                    }
+                }
+
+                return feesViews.OrderBy(g => g.Id).ToList();
+                
+            }
+
+
+        }
+
         public static void GetOrderByCustomer()
         {
             using (PracEntities entity = new PracEntities())
@@ -177,12 +226,26 @@ namespace DbConsole
             Console.WriteLine("---------------------------------------------");
             LinqHelper.IsPalidrome();
             Console.WriteLine("---------------------------------------------");
-
-
             Test.Test3 obj = new Test.Test3();
             obj.getChanges();
+            Console.WriteLine("---------------------------------------------");
+            var result =  LinqHelper.GetFees();
+
+            foreach(var item in result)
+            {
+                Console.WriteLine("Month Name: " + item.monthname + " Amount: " + item.fees);
+            }
             Console.ReadLine();
 
         }
+    }
+
+    public class FeesView
+    {
+        public string monthname { get; set; }
+        public decimal fees { get; set; }
+
+        public int Id { get; set; }
+
     }
 }
