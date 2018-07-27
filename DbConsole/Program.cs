@@ -176,7 +176,6 @@ namespace DbConsole
                 
             }
 
-
         }
 
         public static void GetOrderByCustomer()
@@ -208,6 +207,35 @@ namespace DbConsole
             }
 
         }
+
+        public static void Star(bool isReverse=false)
+        {
+            if (!isReverse)
+            {
+                for (var i = 0; i <= 5; i++)
+                {
+                    for (var j = 0; j <= i; j++)
+                    {
+                        Console.Write(" * ");
+                    }
+
+                    Console.WriteLine(" ");
+                }
+            }
+            else
+            {
+                for (var i = 5; i >= 0; i--)
+                {
+                    for (var j = i; j > 0; j--)
+                    {
+                        Console.Write(" * ");
+                    }
+
+                    Console.WriteLine(" ");
+                }
+            }
+            
+        }
     }
 
     class Program
@@ -235,6 +263,10 @@ namespace DbConsole
             {
                 Console.WriteLine("Month Name: " + item.monthname + " Amount: " + item.fees);
             }
+            Console.WriteLine("---------------------------------------------");
+
+            LinqHelper.Star();
+            LinqHelper.Star(true);
             Console.ReadLine();
 
         }
